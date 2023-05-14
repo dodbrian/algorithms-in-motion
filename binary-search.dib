@@ -1,0 +1,70 @@
+#!meta
+
+{"kernelInfo":{"defaultKernelName":"csharp","items":[{"aliases":[],"name":"csharp"}]}}
+
+#!markdown
+
+# Binary search
+
+#!csharp
+
+// My version of the algorithm (second attempt)
+
+int? BinarySearch(int[] sortedArray, int number)
+{
+    var low = 0;
+    var high = sortedArray.Length - 1;
+    
+    while(true)
+    {
+        var mid = (high - low + 1) / 2 + low;
+        var midValue = sortedArray[mid];
+
+        if(midValue == number) return mid;
+        if(low == high) return null;
+        if(midValue > number) high = mid - 1;
+        else low = mid;
+    }
+}
+
+#!csharp
+
+// The version ChatGPT made (my version sucks...)
+
+int? BinarySearch(int[] sortedArray, int number)
+{
+    int low = 0;
+    int high = sortedArray.Length - 1;
+    
+    while (low <= high)
+    {
+        int mid = low + (high - low) / 2;
+        int midValue = sortedArray[mid];
+
+        if (midValue == number)
+            return mid;
+
+        if (midValue > number)
+            high = mid - 1;
+        else
+            low = mid + 1;
+    }
+    
+    return null;
+}
+
+#!csharp
+
+var numbers = new int[]{ 1, 12, 35, 42, 58 };
+
+BinarySearch(numbers, 0).Display();
+BinarySearch(numbers, 1).Display();
+BinarySearch(numbers, 5).Display();
+BinarySearch(numbers, 12).Display();
+BinarySearch(numbers, 23).Display();
+BinarySearch(numbers, 35).Display();
+BinarySearch(numbers, 39).Display();
+BinarySearch(numbers, 42).Display();
+BinarySearch(numbers, 51).Display();
+BinarySearch(numbers, 58).Display();
+BinarySearch(numbers, 63).Display();
