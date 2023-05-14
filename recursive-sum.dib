@@ -1,0 +1,42 @@
+#!meta
+
+{"kernelInfo":{"defaultKernelName":"csharp","items":[{"aliases":[],"name":"csharp"}]}}
+
+#!markdown
+
+# Recursive Sum
+
+Both functions aim to calculate the sum of an integer array using recursion, but they differ in their implementation:
+
+1. **Parameter Passing:**
+    - `RecursiveSum` takes an integer array and an optional index parameter with a default value of 0. On each recursive call, the index is incremented by 1, effectively stepping through the array. This implementation does not modify the original array nor does it create new ones. 
+    - `RecursiveSum2` only requires an integer array. In each recursive call, it generates a new `Span<int>` or `Memory<int>` that refers to the subset of the original array, starting from the second element (`numbers[1..]`). This method avoids creating new arrays at each step, keeping memory usage low.
+
+2. **Base Case:**
+    - `RecursiveSum` stops recursion when the index is at the last element of the array, returning the last element itself. 
+    - `RecursiveSum2` stops recursion when it receives an empty array and returns 0. 
+
+In terms of time complexity, both functions exhibit a linear time complexity, O(n), where n is the size of the input array. This is because each function must visit every element in the array once.
+
+The space complexity of `RecursiveSum` is O(n) because of the space required on the call stack due to recursion. The same is true for `RecursiveSum2`, because even though it doesn't create new arrays, it still needs to keep track of the array slices on the call stack, leading to a linear space complexity.
+
+#!csharp
+
+int RecursiveSum(int[] numbers, int index = 0)
+{
+    if(numbers.Length - 1 == index) return numbers[index];
+    return numbers[index] + RecursiveSum(numbers, index + 1);
+}
+
+int RecursiveSum2(int[] numbers)
+{
+    if(numbers.Length == 0) return 0;
+    return numbers[0] + RecursiveSum2(numbers[1..]);
+}
+
+#!csharp
+
+var numbers = new int[]{ 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+
+RecursiveSum(numbers).Display();
+RecursiveSum2(numbers).Display();
