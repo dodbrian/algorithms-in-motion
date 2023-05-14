@@ -1,0 +1,57 @@
+#!meta
+
+{"kernelInfo":{"defaultKernelName":"csharp","items":[{"aliases":[],"name":"csharp"}]}}
+
+#!markdown
+
+# Selection Sort
+
+#!csharp
+
+int FindSmallest(IList<int> array)
+{
+    int smallest = array[0];
+    int smallestIndex = 0;
+
+    for(int i = 1; i < array.Count(); i++)
+    {
+        if(array[i] < smallest)
+        {
+            smallest = array[i];
+            smallestIndex = i;
+        }
+    }
+
+    return smallestIndex;
+}
+
+#!csharp
+
+var array = new int[]{ 5, 12, 43, 16, 113, -1, 54 };
+
+var smallestIndex = FindSmallest(array);
+
+smallestIndex.Display()
+
+#!csharp
+
+List<int> SelectionSort(int[] array)
+{
+    var sourceList = array.ToList();
+    var newList = new List<int>(array.Length);
+
+    while(sourceList.Any())
+    {
+        var minIndex = FindSmallest(sourceList);
+        newList.Add(sourceList[minIndex]);
+        sourceList.RemoveAt(minIndex);
+    }
+
+    return newList;
+}
+
+#!csharp
+
+var sortedList = SelectionSort(array);
+
+sortedList
