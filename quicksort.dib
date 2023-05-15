@@ -1,0 +1,35 @@
+#!meta
+
+{"kernelInfo":{"defaultKernelName":"csharp","items":[{"aliases":[],"name":"csharp"}]}}
+
+#!markdown
+
+# Quicksort
+
+#!csharp
+
+IEnumerable<int> QuickSort(IEnumerable<int> numbers)
+{
+    var array = numbers.ToArray();
+ 
+    // Base case   
+    if (array.Length < 2) return numbers;
+
+    // Recursive case
+    var pivot = array[0];
+    var smallerNumbers = array[1..].Where(x => x <= pivot);
+    var biggerNumbers = array[1..].Where(x => x > pivot);
+
+    return QuickSort(smallerNumbers)
+            .Concat(new int[] { pivot })
+            .Concat(QuickSort(biggerNumbers));
+}
+
+#!csharp
+
+var numbers = new int[]{ 22, 13, 45, 67, 1, 44, 198, 2, 30, 27, -10, 2, 26, 14, 0, 108, 209, 23 };
+
+QuickSort(numbers).Display();
+
+var random = new Random();
+QuickSort(Enumerable.Range(1, 1_000_000).Select(_ => random.Next())).Display();
