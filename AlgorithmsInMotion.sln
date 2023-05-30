@@ -1,0 +1,21 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinarySearch", "BinarySearch\BinarySearch.csproj", "{0B3A029A-7F41-4BA5-84AC-30771A2BB226}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionFolder", "SolutionFolder", "{46AAF5B4-A047-4E71-872B-8CCBE59C5082}"
+	ProjectSection(SolutionItems) = preProject
+		todo.md = todo.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0B3A029A-7F41-4BA5-84AC-30771A2BB226}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B3A029A-7F41-4BA5-84AC-30771A2BB226}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B3A029A-7F41-4BA5-84AC-30771A2BB226}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B3A029A-7F41-4BA5-84AC-30771A2BB226}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
