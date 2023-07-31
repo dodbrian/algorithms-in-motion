@@ -38,7 +38,6 @@ int? BinarySearch2(int[] sortedArray, int number)
     return null;
 }
 
-
 var numbers = new[] { 1, 12, 35, 42, 58 };
 var numbersToLookFor = new[] { 0, 1, 5, 12, 23, 35, 39, 42, 51, 58, 63 };
 
