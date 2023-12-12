@@ -15,6 +15,9 @@ foreach (var i in result)
 
 Console.WriteLine("Test Longest Sub Array Sum");
 
-var longest = LongestSubArraySum.Calculate(arr2, 80);
+var nums = new[] { 3, 1, 2, 7, 4, 2, 1, 1, 5 };
+var longest1 = LongestSubArraySum.Calculate(arr2, 80);
+var longest2 = LongestSubArraySum.Calculate(nums, 8);
 
-Console.WriteLine(longest);
+Console.WriteLine(longest1);
+Console.WriteLine(longest2);
