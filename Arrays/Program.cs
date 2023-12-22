@@ -48,3 +48,10 @@ var limitResults = CheckSubarraySumsWithinLimit.Calculate(arrayForSum, queries, 
 
 foreach (var (query, isWithinLimit) in queries.Zip(limitResults))
     Console.WriteLine($"{query[0]}, {query[1]}, {isWithinLimit}");
+
+Console.WriteLine("Minimum Start Value");
+
+var valNums = new[] { -3, 2, -3, 4, 2 };
+var minVal = MinStartValue.Calculate(valNums);
+
+Console.WriteLine(minVal);
