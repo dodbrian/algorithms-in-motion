@@ -55,3 +55,11 @@ var valNums = new[] { -3, 2, -3, 4, 2 };
 var minVal = MinStartValue.Calculate(valNums);
 
 Console.WriteLine(minVal);
+
+Console.WriteLine("Move Zeroes");
+
+var numsWithZeroes = new[] { 1, 0, 0, 3, 6, 0, 12 };
+
+MoveZeroes.Calculate(numsWithZeroes);
+
+foreach (var num in numsWithZeroes) Console.WriteLine(num);
