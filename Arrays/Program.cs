@@ -70,3 +70,9 @@ var numsForUnique = new[] { 1, 2, 3, 4, 3, 2, 1, 5, 6, 8, 9, 11, 12 };
 var ints = UniqueNumbersInArray.Calculate(numsForUnique);
 
 foreach (var num in ints) Console.WriteLine(num);
+
+Console.WriteLine("Longest Distinct Substring");
+
+var longest = LongestDistinctSubstring.Calculate("ecebdeeeeee", 3);
+
+Console.WriteLine(longest);
