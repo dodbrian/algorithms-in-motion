@@ -63,3 +63,10 @@ var numsWithZeroes = new[] { 1, 0, 0, 3, 6, 0, 12 };
 MoveZeroes.Calculate(numsWithZeroes);
 
 foreach (var num in numsWithZeroes) Console.WriteLine(num);
+
+Console.WriteLine("Unique Numbers In Array");
+
+var numsForUnique = new[] { 1, 2, 3, 4, 3, 2, 1, 5, 6, 8, 9, 11, 12 };
+var ints = UniqueNumbersInArray.Calculate(numsForUnique);
+
+foreach (var num in ints) Console.WriteLine(num);
