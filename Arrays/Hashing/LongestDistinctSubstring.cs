@@ -3,7 +3,7 @@
 // For example, given s = "eceba" and k = 2, return 3. The longest substring with at most 2 distinct
 // characters is "ece".
 
-namespace Arrays;
+namespace Arrays.Hashing;
 
 public static class LongestDistinctSubstring
 {

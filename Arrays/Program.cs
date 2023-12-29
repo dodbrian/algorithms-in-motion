@@ -1,4 +1,5 @@
 ﻿using Arrays;
+using Arrays.Hashing;
 
 Console.WriteLine("Sorted and Combined");
 
