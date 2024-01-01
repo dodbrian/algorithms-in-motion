@@ -77,3 +77,7 @@ Console.WriteLine("Longest Distinct Substring");
 var longest = LongestDistinctSubstring.Calculate("ecebdeeeeee", 3);
 
 Console.WriteLine(longest);
+
+Console.WriteLine("Sum Of Digits");
+Console.WriteLine(SumOfDigits.Calculate(128));
+Console.WriteLine(SumOfDigits.Calculate(1));
