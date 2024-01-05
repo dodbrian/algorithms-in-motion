@@ -85,7 +85,7 @@ Console.WriteLine(SumOfDigits.Calculate(1));
 
 Console.WriteLine("Middle Of A Linked List");
 
-const int len = 5; // must be odd
+const int len = 7; // must be odd
 var head = new ListNode(1);
 var curr = head;
 for (var i = 2; i < len + 1; i++)
@@ -97,3 +97,9 @@ for (var i = 2; i < len + 1; i++)
 var middle = MiddleNode.GetMiddle(head);
 
 Console.WriteLine(middle);
+
+Console.WriteLine("Return the Kth node from the end");
+
+var node = KthNodeFromEnd.GetNode(head, 3);
+
+Console.WriteLine(node.Value);
