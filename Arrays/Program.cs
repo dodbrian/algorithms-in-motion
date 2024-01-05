@@ -103,3 +103,15 @@ Console.WriteLine("Return the Kth node from the end");
 var node = KthNodeFromEnd.GetNode(head, 3);
 
 Console.WriteLine(node.Value);
+
+Console.WriteLine("Swap Pairs");
+
+head = new ListNode(1);
+curr = head;
+for (var i = 2; i < len + 2; i++)
+{
+    curr.Next = new ListNode(i);
+    curr = curr.Next;
+}
+
+var listNode = SwapNodes.SwapPairs(head);
