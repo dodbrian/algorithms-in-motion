@@ -1,5 +1,6 @@
 ﻿using Arrays;
 using Arrays.Hashing;
+using Arrays.LinkedLists;
 
 Console.WriteLine("Sorted and Combined");
 
@@ -81,3 +82,18 @@ Console.WriteLine(longest);
 Console.WriteLine("Sum Of Digits");
 Console.WriteLine(SumOfDigits.Calculate(128));
 Console.WriteLine(SumOfDigits.Calculate(1));
+
+Console.WriteLine("Middle Of A Linked List");
+
+const int len = 5; // must be odd
+var head = new ListNode(1);
+var curr = head;
+for (var i = 2; i < len + 1; i++)
+{
+    curr.Next = new ListNode(i);
+    curr = curr.Next;
+}
+
+var middle = MiddleNode.GetMiddle(head);
+
+Console.WriteLine(middle);
