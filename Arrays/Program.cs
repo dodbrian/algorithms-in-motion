@@ -115,3 +115,16 @@ for (var i = 2; i < len + 2; i++)
 }
 
 var listNode = SwapNodes.SwapPairs(head);
+
+Console.WriteLine("Reverse List");
+
+head = new ListNode(1);
+curr = head;
+for (var i = 2; i < len + 2; i++)
+{
+    curr.Next = new ListNode(i);
+    curr = curr.Next;
+}
+
+listNode = ReverseList.Reverse(head);
+Console.WriteLine();
