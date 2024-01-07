@@ -127,4 +127,14 @@ for (var i = 2; i < len + 2; i++)
 }
 
 listNode = ReverseList.Reverse(head);
-Console.WriteLine();
+
+Console.WriteLine("Reverse Between List");
+head = new ListNode(1);
+curr = head;
+for (var i = 2; i < len + 2; i++)
+{
+    curr.Next = new ListNode(i);
+    curr = curr.Next;
+}
+
+listNode = ReverseBetweenList.ReverseBetween(head, 2, 4);
