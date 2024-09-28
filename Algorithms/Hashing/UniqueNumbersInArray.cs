@@ -13,7 +13,7 @@ public static class UniqueNumbersInArray
 
         foreach (var num in nums)
         {
-            if (hash.Contains(num + 1) && hash.Contains(num - 1)) continue;
+            if (hash.Contains(num + 1) || hash.Contains(num - 1)) continue;
 
             yield return num;
         }
