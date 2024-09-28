@@ -18,7 +18,7 @@ public class SwapPairsTests
 
         for (var i = 2; i < len + 2; i++)
         {
-            curr.Next = new ListNode(i);
+            curr.Next = new(i);
             curr = curr.Next;
         }
 
@@ -26,6 +26,6 @@ public class SwapPairsTests
         var listNode = SwapNodes.SwapPairs(head);
 
         // assert
-        listNode.Should().BeEquivalentTo(Expectation);
+        listNode.ToEnumerable().Should().BeEquivalentTo(Expectation);
     }
 }

@@ -14,10 +14,11 @@ public static class SwapNodes
 
         while (right is not null)
         {
-            left.Next = right.Next;
+            left.Next = right.Next?.Next;
+            var temp = right.Next;
             right.Next = left;
-            right = left.Next?.Next;
-            left = left.Next;
+            right = left.Next;
+            left = temp;
         }
 
         return head;
