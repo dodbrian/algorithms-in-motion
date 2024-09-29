@@ -4,6 +4,13 @@ namespace Algorithms.LinkedLists;
 
 public static class ReverseBetweenList
 {
+    /// <summary>
+    /// Reverses a sublist of a singly linked list in-place.
+    /// </summary>
+    /// <param name="head">The head of the singly linked list.</param>
+    /// <param name="left">The 1-indexed position of the first node in the sublist to reverse.</param>
+    /// <param name="right">The 1-indexed position of the last node in the sublist to reverse.</param>
+    /// <returns>The head of the modified linked list.</returns>
     public static ListNode ReverseBetween(ListNode head, int left, int right)
     {
         var prev = left == 1 ? null : head;

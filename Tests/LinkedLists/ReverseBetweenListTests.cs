@@ -6,7 +6,7 @@ namespace Tests.LinkedLists;
 
 public class ReverseBetweenListTests
 {
-    private static readonly int[] Expectation = [1, 4, 3, 2, 5, 6, 7];
+    private static readonly int[] Expectation = [1, 4, 3, 2, 5, 6, 7, 8];
 
     [Fact]
     public void Should_reverse_between_list()
@@ -17,7 +17,7 @@ public class ReverseBetweenListTests
         var curr = head;
         for (var i = 2; i < len + 2; i++)
         {
-            curr.Next = new ListNode(i);
+            curr.Next = new(i);
             curr = curr.Next;
         }
 
@@ -25,6 +25,6 @@ public class ReverseBetweenListTests
         var listNode = ReverseBetweenList.ReverseBetween(head, 2, 4);
 
         // assert
-        listNode.Should().BeEquivalentTo(Expectation);
+        listNode.ToEnumerable().Should().BeEquivalentTo(Expectation);
     }
 }
