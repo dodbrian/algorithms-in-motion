@@ -6,9 +6,16 @@ namespace Algorithms.ArraysAndStrings;
 
 public static class CheckSubarraySumsWithinLimit
 {
+    /// <summary>
+    /// Calculates a boolean array representing the answers to each query.
+    /// </summary>
+    /// <param name="nums">The input integer array.</param>
+    /// <param name="queries">The input array of queries where each query is an array of two integers [x, y].</param>
+    /// <param name="limit">The limit to check against the sum of sub-arrays.</param>
+    /// <returns>A boolean array representing the answers to each query.</returns>
     public static bool[] Calculate(int[] nums, int[][] queries, int limit)
     {
-        if (nums.Length == 0 || queries.Length == 0) return Array.Empty<bool>();
+        if (nums.Length == 0 || queries.Length == 0) return [];
 
         var prefixSum = new int[nums.Length];
 
