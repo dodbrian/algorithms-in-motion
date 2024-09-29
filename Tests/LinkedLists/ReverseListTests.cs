@@ -6,7 +6,7 @@ namespace Tests.LinkedLists;
 
 public class ReverseListTests
 {
-    private static readonly int[] Expectation = [7, 5, 3, 1];
+    private static readonly int[] Expectation = [8, 7, 6, 5, 4, 3, 2, 1];
 
     [Fact]
     public void Should_reverse_list()
@@ -18,7 +18,7 @@ public class ReverseListTests
 
         for (var i = 2; i < len + 2; i++)
         {
-            curr.Next = new ListNode(i);
+            curr.Next = new(i);
             curr = curr.Next;
         }
 
@@ -26,6 +26,6 @@ public class ReverseListTests
         var listNode = ReverseList.Reverse(head);
 
         // assert
-        listNode.Should().BeEquivalentTo(Expectation);
+        listNode.ToEnumerable().Should().BeEquivalentTo(Expectation);
     }
 }

@@ -4,6 +4,11 @@ namespace Algorithms.LinkedLists;
 
 public static class ReverseList
 {
+    /// <summary>
+    /// Reverses a singly linked list.
+    /// </summary>
+    /// <param name="head">The head of the linked list to be reversed.</param>
+    /// <returns>The head of the reversed linked list.</returns>
     public static ListNode Reverse(ListNode head)
     {
         var curr = head;
