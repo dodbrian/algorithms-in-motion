@@ -6,8 +6,8 @@ namespace Tests;
 public class SumOfDigitsTests
 {
     [Theory]
-    [InlineData(128, 500)]
-    [InlineData(1, 500)]
+    [InlineData(128, 11)]
+    [InlineData(1, 1)]
     public void Should_return_sum_of_digits(int input, int expected)
     {
         // arrange
