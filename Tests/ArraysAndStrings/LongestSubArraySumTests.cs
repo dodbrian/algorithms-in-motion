@@ -5,19 +5,23 @@ namespace Tests.ArraysAndStrings;
 
 public class LongestSubArraySumTests
 {
-    [Fact]
-    public void Should_return_longest_subarray_sum()
+    public static TheoryData<int[], int, int> LongestSubArraySumData =>
+        new()
+        {
+            { [3, 1, 2, 7, 4, 2, 1, 1, 5], 8, 4 },
+            { [1, 4, 5, 18, 25, 43, 116, 124, 221], 80, 5 }
+        };
+
+    [Theory]
+    [MemberData(nameof(LongestSubArraySumData))]
+    public void Should_return_longest_subarray_sum(int[] arr, int k, int expected)
     {
         // arrange
-        var nums = new[] { 3, 1, 2, 7, 4, 2, 1, 1, 5 };
-        var arr2 = new[] { 1, 4, 5, 18, 25, 43, 116, 124, 221 };
 
         // act
-        var longest1 = LongestSubArraySum.Calculate(arr2, 80);
-        var longest2 = LongestSubArraySum.Calculate(nums, 8);
+        var longest2 = LongestSubArraySum.Calculate(arr, k);
 
         // assert
-        longest1.Should().Be(3);
-        longest2.Should().Be(5);
+        longest2.Should().Be(expected);
     }
 }
