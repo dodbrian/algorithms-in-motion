@@ -24,6 +24,6 @@ public class MiddleOfALinkedListTests
         var middle = MiddleNode.GetMiddle(head);
 
         // assert
-        middle.Should().Be(400);
+        middle.Should().Be(4);
     }
 }
