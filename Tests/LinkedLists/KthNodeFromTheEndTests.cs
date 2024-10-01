@@ -24,6 +24,6 @@ public class KthNodeFromTheEndTests
         var node = KthNodeFromEnd.GetNode(head, 3);
 
         // assert
-        node.Should().Be(400);
+        node.Value.Should().Be(5);
     }
 }
