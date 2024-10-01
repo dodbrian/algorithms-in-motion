@@ -6,6 +6,11 @@ namespace Algorithms.ArraysAndStrings;
 
 public static class MinStartValue
 {
+    /// <summary>
+    /// Return the minimum positive value of startValue such that the step by step sum is never less than 1.
+    /// </summary>
+    /// <param name="nums">The input array of integers.</param>
+    /// <returns>The minimum positive startValue.</returns>
     public static int Calculate(int[] nums)
     {
         var min = nums[0];

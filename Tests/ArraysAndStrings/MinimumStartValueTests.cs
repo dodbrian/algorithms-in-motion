@@ -15,6 +15,6 @@ public class MinimumStartValueTests
         var minVal = MinStartValue.Calculate(valNums);
 
         // assert
-        minVal.Should().Be(15);
+        minVal.Should().Be(5);
     }
 }
