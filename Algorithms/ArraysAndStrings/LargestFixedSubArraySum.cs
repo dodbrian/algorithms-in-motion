@@ -5,6 +5,12 @@ namespace Algorithms.ArraysAndStrings;
 
 public static class LargestFixedSubArraySum
 {
+    /// <summary>
+    /// Finds the sum of the subarray with the largest sum whose length is k.
+    /// </summary>
+    /// <param name="nums">The input integer array.</param>
+    /// <param name="k">The length of the subarray.</param>
+    /// <returns>The sum of the subarray with the largest sum whose length is k.</returns>
     public static int Calculate(int[] nums, int k)
     {
         if (k < 1) return 0;

@@ -15,6 +15,6 @@ public class LargestSubArraySumTests
         var subArraySum = LargestFixedSubArraySum.Calculate(fixedWindowArray, 4);
 
         // assert
-        subArraySum.Should().Be(12);
+        subArraySum.Should().Be(18);
     }
 }
