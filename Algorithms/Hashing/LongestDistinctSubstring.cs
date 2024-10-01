@@ -7,6 +7,12 @@ namespace Algorithms.Hashing;
 
 public static class LongestDistinctSubstring
 {
+    /// <summary>
+    /// Calculates the length of the longest substring that contains at most k distinct characters.
+    /// </summary>
+    /// <param name="s">The input string.</param>
+    /// <param name="k">The maximum number of distinct characters in the substring.</param>
+    /// <returns>The length of the longest substring.</returns>
     public static int Calculate(string s, int k)
     {
         var left = 0;
@@ -30,7 +36,7 @@ public static class LongestDistinctSubstring
         return ans;
     }
 
-    private static void Add(IDictionary<char, int> map, char c)
+    private static void Add(Dictionary<char, int> map, char c)
     {
         if (map.TryGetValue(c, out var count))
             map[c] = count + 1;
@@ -38,7 +44,7 @@ public static class LongestDistinctSubstring
             map[c] = 1;
     }
 
-    private static void Remove(IDictionary<char, int> map, char c)
+    private static void Remove(Dictionary<char, int> map, char c)
     {
         if (!map.TryGetValue(c, out var count)) return;
 

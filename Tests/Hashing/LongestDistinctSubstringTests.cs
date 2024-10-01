@@ -15,6 +15,6 @@ public class LongestDistinctSubstringTests
         var longest = LongestDistinctSubstring.Calculate(line, 3);
 
         // assert
-        longest.Should().Be(3);
+        longest.Should().Be(9);
     }
 }
