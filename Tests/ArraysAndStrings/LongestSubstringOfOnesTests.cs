@@ -15,6 +15,6 @@ public class LongestSubstringOfOnesTests
         var longestOfOnes = LongestSubstringOfOnes.Calculate(s);
 
         // assert
-        longestOfOnes.Should().Be(3);
+        longestOfOnes.Should().Be(5);
     }
 }
