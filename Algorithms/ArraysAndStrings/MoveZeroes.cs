@@ -2,6 +2,10 @@ namespace Algorithms.ArraysAndStrings;
 
 public static class MoveZeroes
 {
+    /// <summary>
+    /// Moves all the zeroes of the given array to the right.
+    /// </summary>
+    /// <param name="nums">The input array of integers.</param>
     public static void Calculate(int[] nums)
     {
         var left = 0;
