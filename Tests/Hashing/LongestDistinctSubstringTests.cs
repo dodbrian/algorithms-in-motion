@@ -1,5 +1,4 @@
 using Algorithms.Hashing;
-using FluentAssertions;
 
 namespace Tests.Hashing;
 

@@ -1,5 +1,4 @@
 using Algorithms.VacuumCleaner;
-using FluentAssertions;
 
 namespace Tests.VacuumCleaner;
 

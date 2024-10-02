@@ -1,6 +1,5 @@
 using Algorithms.DataStructures;
 using Algorithms.LinkedLists;
-using FluentAssertions;
 
 namespace Tests.LinkedLists;
 

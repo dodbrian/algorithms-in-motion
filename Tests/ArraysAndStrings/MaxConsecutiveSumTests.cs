@@ -1,5 +1,4 @@
 ﻿using Algorithms.ArraysAndStrings;
-using FluentAssertions;
 
 namespace Tests.ArraysAndStrings;
 

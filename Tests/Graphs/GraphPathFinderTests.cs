@@ -1,6 +1,5 @@
 using Algorithms.DataStructures;
 using Algorithms.Graphs;
-using FluentAssertions;
 
 namespace Tests.Graphs;
 
