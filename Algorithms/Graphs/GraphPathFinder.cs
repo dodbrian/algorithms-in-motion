@@ -6,7 +6,7 @@ public static class GraphPathFinder
 {
     public static List<Vertex> FindPathUndirectedUnweighted(Vertex start, Vertex end, int limit)
     {
-        var predecessors = new Dictionary<Vertex, Vertex?>
+        var predecessors = new Dictionary<Vertex, Vertex>
         {
             { start, null }
         };
